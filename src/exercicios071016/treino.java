@@ -45,9 +45,9 @@ public class treino {
 	}
 	private void exercicio3() {
 		int limite = 5;
-		int rand = (new Random()).nextInt(limite);
-		rand = rand +1;
-		System.out.println(rand);
+		int rand = (new Random()).nextInt(limite)+1;
+	
+
 		
 		for (int i = 0; i < 5; i++) {
 			System.out.println("Insere o "+(i+1)+"º");
