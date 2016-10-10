@@ -1,11 +1,14 @@
 package exercicios071016;
 
+import java.util.Random;
 import java.util.Scanner;
+
+import javax.xml.ws.Endpoint;
 
 public class treino {
 
 	public treino() {
-		exercicio2();
+		exercicio3();
 	}
 
 	private void exercicio1() {
@@ -40,4 +43,23 @@ public class treino {
 		}
 
 	}
+	private void exercicio3() {
+		int limite = 5;
+		int rand = (new Random()).nextInt(limite);
+		rand = rand +1;
+		System.out.println(rand);
+		
+		for (int i = 0; i < 5; i++) {
+			System.out.println("Insere o "+(i+1)+"º");
+			int num = (new Scanner(System.in)).nextInt();
+			if(num == rand){
+				System.out.println("ACERTOU!!");
+				System.exit(0);
+			}else if(i == 5){
+				System.out.println("Falou nas 5 tentativas");
+			}
+			
+		}
+	}
+	
 }
