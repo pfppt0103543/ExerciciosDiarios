@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		new ecercicios100616.BigBoss();
+		new exercicios101016.BigBoss();
 
 	}
 
