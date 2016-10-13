@@ -1,36 +1,35 @@
-package exercicios101016;
+package exercicios131016;
 
 import java.util.ArrayList;
 
+
+
+
 public class BigBoss {
-	ArrayList<GestaoStand> _stands; 
-	
-	
+	ArrayList<GestaoLoja> _lojas; 
 	public BigBoss() {
-		_stands = new ArrayList<GestaoStand>();
 		
-		GestaoStand raminhos = new GestaoStand();
 		
-		_stands.add(raminhos);
+		_lojas = new ArrayList<GestaoLoja>();
+		GestaoLoja raminhos = new GestaoLoja();
+		_lojas.add(raminhos);
+		relatorioLoja(raminhos);
 		
-		relatorioStand(raminhos);
 	}
 	
-	
-	
-	private void relatorioStand(GestaoStand stand) {
-		ArrayList tr = stand.get_transaccoes();
+	private void relatorioLoja(GestaoLoja loja) {
+		ArrayList tr = loja.get_transaccoes();
 		
 		int totalTransaccoes = tr.size();
 		
-		System.out.println("O stand teve " + totalTransaccoes + " de transaccoes");
+		System.out.println("A lojo teve " + totalTransaccoes + " de transaccoes");
 		
-		double lucro = lucrosStand(stand);
+		double lucro = lucrosStand(loja);
 		System.out.println("e lucrou " + lucro + " de transaccoes");
 	}
 	
-	private double lucrosStand(GestaoStand stand) {
-		ArrayList tr = stand.get_transaccoes();
+	private double lucrosStand(GestaoLoja loja) {
+		ArrayList tr = loja.get_transaccoes();
 		
 		double lucro = 0, 
 				vendas= 0, 
@@ -45,7 +44,7 @@ public class BigBoss {
 				vendas = vendas + t.getPreco();			
 		}
 		
-		lucro = vendas - compras;
+		lucro = vendas + compras;
 		
 		return lucro;
 	}

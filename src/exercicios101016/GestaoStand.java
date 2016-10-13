@@ -1,6 +1,7 @@
 package exercicios101016;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class GestaoStand {
 	private ArrayList _transaccoes;
@@ -38,7 +39,8 @@ public class GestaoStand {
 	}
 	
 	public Automovel criarCarro() {
-		Automovel a = new Automovel(2500.00, 
+		Automovel a = new Automovel(
+				2500.00, 
 				1600, 
 				"Renault", 
 				"Megane", 
@@ -48,7 +50,11 @@ public class GestaoStand {
 	}
 	
 	public Cliente criarCliente() {
-		Cliente c = new Cliente("Alberto Matos", "Sesimbra", "963 543 846", 876543129);
+		Cliente c = new Cliente(
+				"Alberto Matos",
+				"Sesimbra",
+				"963 543 846",
+				876543129);
 		
 		return c;
 	}
